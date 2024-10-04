@@ -5,19 +5,20 @@ This module is a Micro:bit MicroPython program
 """
 
 from microbit import *
-from time import*
+from time import sleep
 
 display.clear
 display.show(Image.HAPPY)
 
-let cookie_click_number: number
+cookie_click_number: int
 cookie_click_number = 0
 
 while True:
-    if button_a. is_pressed
+    if button_a. is_pressed:
         cookie_click_number += 1
-        time(1)
+        sleep(1)
         display.scroll(str(cookie_click_number))
-
-while True:
-    if button_b. is_pressed
+    if button_b. is_pressed:
+        cookie_click_number = 0
+        sleep(1)
+        display.scroll(str(cookie_click_number))
