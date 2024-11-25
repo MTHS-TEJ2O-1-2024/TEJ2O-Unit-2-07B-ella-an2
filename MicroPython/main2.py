@@ -15,7 +15,10 @@ cookie_click_number = 0
 
 while True:
     if button_a.is_pressed:
-        display.scroll("A")
-
+        cookie_click_number += 1
+        sleep(1)
+        display.scroll(str(cookie_click_number))
     if button_b.is_pressed:
-        display.scroll("B")
+        cookie_click_number = 0
+        sleep(1)
+        display.scroll(str(cookie_click_number))
